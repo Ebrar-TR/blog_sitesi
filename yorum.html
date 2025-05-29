@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Yorum</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+	<script src="script.js" defer></script>
+</head>
+	<style>
+	 body{
+			 background-color: #0d1b2a;
+			 font-weight: bold;
+		}
+ #genelCerceve{
+	 background-color:lightblue; 
+	 border-radius: 10px; 
+     width: 400px;
+	 height: 550px; 
+		}
+ #mesajGirisi{
+	 background-color: white; 
+	 border-radius: 10px; 
+     width: 400px; 
+	 height: 70px;  
+		}    
+ #mesajGirisi > img{ 
+	 width: 80px;
+	 height: 70px; 
+	 float: left;   
+     margin-left:10px; 
+	 
+		}
+ #mesajGirisi>input{
+	 margin-top:30px; 
+	 margin-left:10px;  
+		}
+ #mesajKutulari{ 
+	 background-color: white; 
+	 border-radius: 3px; 
+     width: 380px;
+	 height: auto; 
+	 margin-left:10px; 
+		}
+ .gidenMesaj{ 
+	 border-bottom:2px gray solid; 
+		}
+ .gidenMesaj > img{ 
+	 width: 50px; 
+	 height: 50px; 
+	 margin:5px 5px 0px 5px;
+		}
+ #tarih{ 
+	 color:gray; 
+	 font-size:10px;  
+		}
+		main{
+			position: relative;
+			left: 450px;
+			margin-top: 20px;
+			color: black;
+		}
+		input{
+			position: relative;
+			border-radius: 15px;
+			height: 35px;
+			bottom: 10px;
+		}
+		.button{
+			background-color: black;
+			color: white;
+		}
+	</style>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <h1>DesignNova</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse linkler" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="blog_yazilari.html">Yazılar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+					
+					<div class="dark-toggler">
+					<button class="dark" style="background-color: #0d1b2a; color: white; border: none;">
+						<i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+					</button>		
+				</div>
+					
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+	<main>
+		<div class="container">
+		 <div id="genelCerceve">    
+			<div id="mesajGirisi">
+				<img src="img/kullanici.png" alt="">
+			 <input type="text" id="mesaj"  placeholder="Mesajınızı giriniz.">
+			 <input type="button" value="Gönder" onclick="mesajGonder()" class="button">
+			 </div>
+			 <hr>
+ 			<div id="mesajKutulari">
+ 				<!-- Buraya innerHTML komutu ile kodlar eklenecek  -->      
+  			</div>
+		 </div>
+	</div>
+	</main>
+	
+	<footer>
+        <p>&copy; 2025 DesignNova | Tüm Hakları Saklıdır.</p>
+    </footer>
+	
+	<script>
+	function mesajGonder(){
+    var mesaj=document.getElementById("mesaj").value;
+    var d = new Date();
+    var saat=d.getHours();
+    var dakika=d.getMinutes();  
+    document.getElementById("mesajKutulari").innerHTML+=
+          "<div class='gidenMesaj'> <img src='img/kullanici.png'>"
+            + mesaj +
+          "<span id='tarih'>"+saat+":"+dakika+"</span></div>";
+    document.getElementById("mesaj").value="";
+ }
+	</script>
+</body>
+</html>

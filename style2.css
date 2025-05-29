@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+ body {
+   font-family: 'Poppins', sans-serif;
+   color: white;
+   background-color: white;
+ }
+.navbar {
+    background-color: #0d1b2a;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+.navbar .collapse .navbar-nav{
+	font-size: 20px;
+}
+.navbar .collapse .navbar-nav .nav-item{
+	padding: 15px;
+}
+        .card {
+            background-color: #1b263b;
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            color: white;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .btn-primary {
+            background-color: #00aaff;
+            border: none;
+        }
+        footer {
+            background-color: #0d1b2a;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .search-box {
+            margin-bottom: 30px;
+        }
+.bg{
+	background-color: #085E7D;
+}
+.logo{
+	position: relative;
+	right: 25px;
+}
+.linkler{
+	font-size: 20px;
+}
+.linkler a:hover,
+.linkler a:active{
+	color: aliceblue;
+	border-bottom: 3px solid #D7C2C2;
+}
+.linkler a{
+	transition: .3s;
+}
+.linkler a:hover{
+	color: #08D9D6;
+}
+.nav{
+	border: #000000;
+	text-decoration: none;
+	color: black;
+}
+.ara{
+	border-radius: 20px;
+}
+.dark-toggler{
+	position: relative;
+	left: 30px;
+	margin-top: 22px;
+}
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+footer{
+	position: sticky;
+	position: static;
+}

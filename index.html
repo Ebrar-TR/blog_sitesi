@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Anasayfa</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <h1>DesignNova</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse linkler" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="blog_yazilari.html">Yazılar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+					
+					<div class="arama mt-1"> 
+						<form class="d-flex">
+				<input type="text" class="form-control me-1 " placeholder="Search">
+				<button class="btn btn-info">
+					<i class="bx bx-search-alt"></i>
+				</button>
+			</form>
+					</div>
+					
+				<div class="dark-toggler">
+					<button class="dark" style="background-color: #0d1b2a; color: white; border: none;">
+						<i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+					</button>		
+				</div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+	
+	<header class="banner">
+		<div class="border-bottom">
+					<div class="container mt-2">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner carousel img banner-img">
+    <div class="carousel-item active">
+      <img src="img/ev.jpg" class="d-block w-100" alt="banner-image">
+    </div>
+    <div class="carousel-item">
+      <img src="img/ofis.jpg" class="d-block w-100" alt="banner-image">
+    </div>
+    <div class="carousel-item">
+      <img src="img/araba.jpeg" class="d-block w-100" alt="banner-image">
+    </div>
+  </div>
+</div>
+			</div>
+		 </div>
+	</header>
+	
+	<main class="tanitim">
+		<div id="about">
+			<div class="text-center pt-4 my-5 px-4 border-bottom text-white bg h-50 about-text">
+				<h1 class="display-4 fw-bold">DesignNova</h1>
+			<div class="col-lg-6 mx-auto">
+				<p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo in itaque illo laboriosam libero, nihil natus cumque minima sit exercitationem quaerat labore veritatis atque voluptas ducimus assumenda vel dolorem, dignissimos necessitatibus? Iste fuga accusamus quas ducimus maiores molestias, incidunt quod!</p>
+			</div>
+		  </div>
+		</div>
+		 
+		
+		<div class="container my-4 border-4">	
+              <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4" id="vid">
+					<div class="col">
+						<div class="card kart mb-3 shadow text-black card">
+							<img src="img/ev.jpg" alt="" class="card-img-top">
+							
+							<div class="card-body">
+								<h5 class="card-title">Ev Dizaynı</h5>
+								<p class="card-text">Evlerinizi Güzelleştirin.</p>
+
+								<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+ 								Devamını Oku
+								</button>
+								
+								<div class="icon container mx-0">								
+									<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+										<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+										<label class="btn btn-outline-danger" for="btncheck1">
+											<i class="bx bx-bookmark-heart font heart" style="font-size: 20px;"></i>
+										</label>
+									</div>
+								</div>
+								
+
+								<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  									<div class="modal-dialog">
+    							<div class="modal-content">
+     							 <div class="modal-header">
+       		 					<h1 class="modal-title fs-5" id="staticBackdropLabel">Ev Dizaynı</h1>
+        						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      							</div>
+     							 <div class="modal-body">
+       								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, corporis.
+      							</div>
+      							<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        							<a href="ev_design.html"><button type="button" class="btn btn-primary">Sayfaya Git</button></a>
+     							 </div>
+    							</div>
+  								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				  
+				  <div class="col">
+						<div class="card mb-3 shadow text-black card">
+							<img src="img/ofis.jpg" alt="" class="card-img-top">
+							
+							<div class="card-body">
+								<h5 class="card-title">Ofis Dizaynı</h5>
+								<p class="card-text">Ofisinizde Evinizde Gibi Hissedin.</p>
+
+								<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+ 								Devamını Oku
+								</button>
+									
+								<div class="icon container mx-0">								
+									<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+										<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+										<label class="btn btn-outline-danger" for="btncheck2">
+											<i class="bx bx-bookmark-heart font heart" style="font-size: 20px;"></i>
+										</label>
+									</div>
+								</div>
+								
+								<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  									<div class="modal-dialog">
+    							<div class="modal-content">
+     							 <div class="modal-header">
+       		 					<h1 class="modal-title fs-5" id="staticBackdropLabel1">Ofis Dizaynı</h1>
+        						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      							</div>
+     							 <div class="modal-body">
+       								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, eum!
+      							</div>
+      							<div class="modal-footer">
+        							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        							<a href="ofis_design.html"><button type="button" class="btn btn-primary">Sayfaya Git</button></a>
+     							 </div>
+    							</div>
+  								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				  
+				   <div class="col">
+						<div class="card mb-3 shadow text-black card">
+							<img src="img/araba.jpeg" alt="" class="card-img-top">
+							
+							<div class="card-body">
+								<h5 class="card-title">Araba İçi Dizaynı</h5>
+								<p class="card-text">Arabanıza Rahatlık Getirin.</p>
+
+								<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+								  Devamını Oku
+								</button>
+								
+								<div class="icon container mx-0">								
+									<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+										<input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+										<label class="btn btn-outline-danger" for="btncheck3">
+											<i class="bx bx-bookmark-heart font heart" style="font-size: 20px;"></i>
+										</label>
+									</div>
+								</div>
+
+								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								  <div class="modal-dialog">
+									<div class="modal-content">
+									  <div class="modal-header">
+										<h1 class="modal-title fs-5" id="exampleModalLabel">Araba Dizaynı</h1>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									  </div>
+									  <div class="modal-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, architecto?
+									  </div>
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+										<a href="araba_design.html"><button type="button" class="btn btn-primary">Sayfaya Git</button></a>
+									  </div>
+									</div>
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+			<div class="container buton">
+				<a href="blog_yazilari.html"><button type="button" class="btn btn-outline-dark bg-dark text-white w-50 mb-5">Tüm Gönderileri Gör</button></a>
+			</div>
+			</div>
+		</div>
+	</main>
+	
+	<div id="footer">
+			<footer class="bg text-white text-center p-3" style="height: 50px">
+				<p>&copy; 2025 DesignNova | Tüm Hakları Saklıdır.</p>
+			</footer>
+	</div>
+	
+	
+	
+	<script src="js/bootstrap.bundle.min.js"></script>
+	 <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha512-A98SmLRZISk4eIxQBeCm8k0jAcwN3A3lBx4hr7baoMpV1VpxcxlZIhi5fJIZN50sQ5RlCzx8yV+Voy2cR6x0aA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+</body>
+</html>

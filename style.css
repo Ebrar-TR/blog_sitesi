@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Arial", Helvetica, sans-serif;
+}
+.dark{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar{
+	background-color: #0d1b2a;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+.bg{
+	background-color: #0d1b2a;
+}
+.logo{
+	position: relative;
+	right: 25px;
+}
+.linkler{
+	font-size: 20px;
+}
+.arama{
+	position: relative;
+	left: 25px;
+}
+.linkler a:hover,
+.linkler a:active{
+	color: aliceblue;
+	border-bottom: 3px solid #D7C2C2;
+}
+.linkler a{
+	transition: .3s;
+}
+.linkler a:hover{
+	color: #08D9D6;
+}
+.banner
+{
+	height: 150px;
+}
+.carousel{
+	z-index: -1;
+}
+.carousel img{
+	height: 580px;
+}
+.tanitim
+{
+	margin-top: 450px;
+	z-index: 5;
+}
+.one-cikanlar{
+	position: relative;
+	left: 152px;
+}
+.one-cikanlar:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+.buton{
+	position: relative;
+	left: 100px;
+	border-radius: 10px;
+}
+.buton:hover{
+	opacity: 0.9;
+}
+.icon{
+	position: relative;
+	left: 300px;
+}
+.dark-toggler{
+	position: relative;
+	left: 50px;
+}
+  .card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            color: white;
+        }
+.card:hover{
+	 transform: translateY(-10px);
+}
+@media screen and (min-width:768px)
+{
+	.img-fluid{
+		height: 32vh;
+	}
+	#map{
+		height: 100%;
+	}
+}

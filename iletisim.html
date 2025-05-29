@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>İletişim</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style2.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+ <script src="script.js" defer></script>
+ <style>
+  .icon{
+	position: relative;
+	left: 300px;
+	  bottom: 50px;
+}
+	 .card{
+		 background-color: #1b263b;
+	 }
+	 	.hava-durumu{
+			color: white;
+			z-index: 5;
+			text-align: center;
+			 background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+			max-width: 450px;
+			border-radius: 20px;
+			padding: 20px;
+			margin-top: 50px;
+		}
+	 input, button { 
+		padding: 10px; 
+		 font-size: 16px;
+		 border-radius: 10px;
+		 margin-top: 10px;
+		}
+	 #weather { 
+			margin-top: 20px; 
+		}
+    </style>
+</head>
+
+<body>
+   	<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <h1>DesignNova</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse linkler" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="blog_yazilari.html">Yazılar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
+					
+					<div class="dark-toggler">
+					<button class="dark" style="background-color: #0d1b2a; color: white; border: none;">
+						<i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+					</button>		
+				</div>
+					
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <main>
+		<div class="container my-4">
+			<h2 class="my-3">Contact Us</h2>
+			<div class="row g-2">
+				<div class="col-md-6 ">
+					<div class="card bg">
+						<div class="card-body">
+							<div class="alert alert-warning" role="alert">Lütfen Bu Formu Doldurunuz.</div> <!--Alert Uyarı Demektir-->
+							  <form class="row g-3 text-white">
+								  <div class="col-md-6">
+									  <label for="email" class="form-label">Email Adres</label>
+									  <input type="email" class="form-control" placeholder="Email" name="email" id="email">
+								  </div>
+								  <div class="col-md-6">
+									  <label for="name" class="form-label">İsim</label>
+									  <input type="name" class="form-control" placeholder="Name" name="name" id="name">
+								  </div>
+								  <div class="col-md-12">
+									  <label for="phone" class="form-label">Telefon</label>
+									  <input type="phone" class="form-control" placeholder="Phone" name="phone" id="phone">
+								  </div>
+								  <div class="col-md-12">
+									  <label for="Message" class="form-label">Mesaj</label>
+									  <textarea for="message" placeholder="Message" class="form-control"></textarea>
+								  </div>
+								  <div class="col-md-12">
+									  <button type="button" class="btn btn-outline-info form-control" >Mesaj Gönder</button>
+								  </div>
+							 </form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<iframe id="map" src="https://www.google.com/maps/embed?  pb=1m18!1m12:1m3:1d96438.7277022912!2d29.073015134884944!3d40.944017290685345:2m3!1f0!2f0:2f0:3f0:3m2!li024:2i768:4f13.1!3m3!1m2:1s0x14cac4336e39827f%3A0x608e0ae971e8ddc2!2sMaltepe%2F%C4%80İstanbul!5e0!3m2!1str!2str!4v1740986410669:5m2!1str!2str" width="100%" height="450" style="border: 0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	
+	<div class="container hava-durumu mt-5">
+		<h1>Hava Durumu</h1>
+  		<input type="text" id="cityInput" placeholder="Şehir adı girin">
+  		<button onclick="getWeather()">Göster</button>
+
+  	<div id="weather">
+    	<h2 id="cityName"></h2>
+    	<p id="temperature"></p>
+    	<p id="description"></p>
+  	</div>
+  </div>
+
+    <!-- Footer -->
+    <footer style="position: static;">
+        <p>&copy; 2025 DesignNova | Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+       		const apiKey = "d8fe449f7559a5ede6b1e827b66abf07"; // Buraya OpenWeatherMap API key'ini gir
+
+    function getWeather() {
+  const city = document.getElementById("cityInput").value.trim();
+  if (!city) {
+    alert("Lütfen bir şehir adı girin.");
+    return;
+  }
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=tr`; 
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error("Şehir bulunamadı");
+      return response.json();
+    })
+    .then(data => {
+      document.getElementById("cityName").textContent = data.name;
+      document.getElementById("temperature").textContent = `Sıcaklık: ${data.main.temp}°C`;
+document.getElementById("description").textContent = `Hava: ${data.weather[0].description}`;
+    })
+    .catch(error => {
+      document.getElementById("cityName").textContent = "Hata";
+      document.getElementById("temperature").textContent = "";
+      document.getElementById("description").textContent = error.message;
+    });
+}
+    </script>
+	
+	<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha512-A98SmLRZISk4eIxQBeCm8k0jAcwN3A3lBx4hr7baoMpV1VpxcxlZIhi5fJIZN50sQ5RlCzx8yV+Voy2cR6x0aA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
